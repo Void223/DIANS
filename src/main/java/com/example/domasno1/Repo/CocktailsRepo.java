@@ -1,6 +1,9 @@
 package com.example.domasno1.Repo;
 
+import com.example.domasno1.Model.Cocktails;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface CocktailsRepo extends JpaRepository<Long, CocktailsRepo> {
+@Repository
+public interface CocktailsRepo extends JpaRepository<Cocktails, Long> {
 }

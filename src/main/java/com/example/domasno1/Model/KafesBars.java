@@ -17,4 +17,7 @@ public class KafesBars {
     @ManyToMany
     private List<Cocktails> cocktailsList;
 
+    public List<Cocktails> getCocktailsList() {
+        return cocktailsList;
+    }
 }
