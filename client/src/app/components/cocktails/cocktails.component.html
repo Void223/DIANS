@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <div class="row">
+      <div *ngFor="let cocktail of cocktails.drinks" class="col text-center">
+        <div class="row">
+            <div class="col">
+                <img [src]="cocktail.strDrinkThumb">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p class="bolded">{{cocktail.strDrink}}</p>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
