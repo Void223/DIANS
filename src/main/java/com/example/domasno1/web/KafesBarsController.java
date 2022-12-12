@@ -27,6 +27,7 @@ public class KafesBarsController {
 
     }
 
+    @GetMapping({"/Cocktails"})
     public String showCocktails(){
         List<Cocktails> cocktailsList;
         cocktailsList = cocktailsService.listAll();
