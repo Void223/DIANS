@@ -4,12 +4,12 @@ import com.example.domasno1.Model.Cocktails;
 import com.example.domasno1.Model.KafesBars;
 import com.example.domasno1.Service.CocktailsService;
 import com.example.domasno1.Service.KafesBarsService;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@Controller
+@RestController
 public class KafesBarsController {
 
     private final CocktailsService cocktailsService;
@@ -27,7 +27,7 @@ public class KafesBarsController {
         return kafesBarsList;
     }
 
-    @GetMapping({"/Cocktails"})
+    @GetMapping({"/cocktails"})
     public List<Cocktails> showCocktails(){
         List<Cocktails> cocktailsList;
         cocktailsList = cocktailsService.listAll();
