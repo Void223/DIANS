@@ -7,15 +7,19 @@
             <div class="col">
                 <h1 class="display-5 fw-bold">Explore and Find</h1>
                 <div class="row">
-                    <p class="col-md-8 fs-4">Looking for cocktails near you? We can help you find the best match for you!</p>
-                    <button class="btn btn-primary btn-lg" [routerLink]="'/cocktails'" type="button">Search by cocktails</button>
+                    <p class="col-md-8 fs-4">{{'homepagemessage1' | translate}}</p>
+                    <button class="btn btn-primary btn-lg" [routerLink]="'/cocktails'" type="button">{{'searchbycocktails' | translate}}</button>
                 </div>
                 <div class="row mt-4">
-                    <p class="col-md-8 fs-4">Want to see what the bars have in store for you? Search below!</p>
-                    <button class="btn btn-primary btn-lg" [routerLink]="'/bars'" type="button">Search by bars</button>
+                    <p class="col-md-8 fs-4">{{'homepagemessage2' | translate}}</p>
+                    <button class="btn btn-primary btn-lg" [routerLink]="'/bars'" type="button">{{'searchbybars' | translate}}</button>
                 </div>
+                <div class="row mt-4">
+                  <p class="col-md-8 fs-4">{{'homepagemessage3' | translate}}</p>
+                  <button class="btn btn-primary btn-lg" [routerLink]="'/ingredients'" type="button">{{'searchbyingredients' | translate}}</button>
+              </div>
             </div>
-            <div class="col">
+            <div class="col d-flex align-items-center justify-content-center">
                 <img [src]="'assets/images/cocktail.png'">
             </div>
           </div>

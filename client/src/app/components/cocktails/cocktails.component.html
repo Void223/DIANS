@@ -1,5 +1,8 @@
 <div class="container mt-5">
-    <div class="row">
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" [placeholder]="'searchcocktail' | translate" aria-label="Search">
+  </form>
+    <div class="row mt-5">
       <div *ngFor="let cocktail of cocktails.drinks" class="col text-center">
         <div class="row">
             <div class="col">
