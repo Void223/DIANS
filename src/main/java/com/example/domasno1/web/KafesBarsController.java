@@ -21,15 +21,16 @@ public class KafesBarsController {
     }
 
     @GetMapping({"/kafebars"})
-    public String showKafeBars(){
+    public List<KafesBars> showKafeBars(){
         List<KafesBars> kafesBarsList;
         kafesBarsList = kafesBarsService.listAll();
-
+        return kafesBarsList;
     }
 
     @GetMapping({"/Cocktails"})
-    public String showCocktails(){
+    public List<Cocktails> showCocktails(){
         List<Cocktails> cocktailsList;
         cocktailsList = cocktailsService.listAll();
+        return cocktailsList;
     }
 }

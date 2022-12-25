@@ -12,8 +12,8 @@ public class KafesBars {
     private Long id;
     private String type;
     private String name;
-    private float coordinate0;
-    private float coordinate1;
+    private double coordinate0;
+    private double coordinate1;
     @ManyToMany
     private List<Cocktails> cocktailsList;
 

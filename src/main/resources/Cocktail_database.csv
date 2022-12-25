@@ -1,42 +1,40 @@
-ID,Име на коктел,состав,цена
-1,Negroni,"Gin,Campari,Sweet Vermouth",250 ден
-2,Cuba Libre,"Rum,Coke",280 ден
-3,Pina Colada,"Pineapple juice, White Rum,Coconut cream",280 ден
-4,Long island Iced tea,"Vodka,Rum,Gin,Tequila,Triple sec,Cola,Sweet and sour mix",350 ден
-5,White Russian,"Vodka,Kahlua,Heavy cream",270 ден
-6,Black Russian,"Vodka,Coffee liqueur",270 ден
-7,Mojito,"Lime,Mint,White rum,Soda water",240 ден
-8,Kamikaze,"Vodka,Triple sec,Lime juice",230 ден
-9,Margarita,"Tequila,Cointreau,lime juice",200 ден
-10,Cosmopolitan,"Citrus vodka,Cointreau,lime juice,cranberry juice",260 ден
-11,B-52,"Coffee liqueur, Irish cream,Orange liqueur",200 ден
-12,Tequila Sunrise,"Grenadine,Tequila,Triple sec,orange,lemon",280 ден
-13,Old Fashioned,"Bourbon or rye whiskey,Angostura bitters,sugar,orange twist garnish",300 ден
-14,Moscow Mule,"Vodka,Ginger beer,Lime juice",280 ден
-15,Martini,"Gin or vodka,Dry vermouth,Olive",250 ден
-16,Whiskey Sour,"Whiskey,Lemon juice,Egg white (optional)",280 ден
-17,French 75,"
-Gin,dashes simple syrup,Lemon juice,Champagne
-",250 ден
-18,Manhattan,"Whiskey,Sweet vermouth,dashes Angostura bitters",270 ден
-19,Spritz,"Aperol,Cinzano Prosecco,Soda",200 ден
-20,Gimlet,"Gin or vodka,Simple syrup,Lime juice",200 ден
-21,Mimosa,"Champagne,Orange juice",250 ден
-22,Tom Collins,"Old Tom gin,lemon juice,simple syrup,soda",300 ден
-23,Penicillin,"Scotch,Lemon juice,Honey-ginger syrup",280 ден
-24,Paloma,"Tequila,Grapefruit juice,Sparkling water, Lime juice",260 ден
-25,Bloody mary ,"Vodka,Tomato juice,Lemon juice,Tabasco sauce, Worcestershire sauce",280 ден
-26,Americano,"Campari,Sweet Vermouth,Soda water",220 ден
-27,Mai Tai,"Rum,Orange liqueur,Lime juice,Orgeat syrup",260 ден
-28,Pisco Sour,"Pisco,Lime juice,Egg white",250 ден
-29,Clover Club,"Gin,Vermouth,Lemon juice,Rasberry cordial,Egg white",280 ден
-30,Gin Fizz,"Gin,Lemon juice,Sparkling water",250 ден
-31,Amaretto Sour,"Amaretto liqueur,Simple syrup,Lemon juice",270 ден
-32,Zombie,"Dark rum,White rum,Lime juice,Pineapple juice",280 ден
-33,Sazerac,"Absinthe,Rye Whiskey,Cognac,Bitters",280 ден
-34,Vodka Martini,"Vodka,Vermouth,Green Olive",260 ден
-35,Old Cuban,"Lime juice,Simple syrup,Amber rum",280 ден
-36,Vesper,"Gin,Vodka,Lillet aperitif",260 ден
-37,Bellini,"Peach pureem,Prosecco",260 ден
-38,Painkiller,"Rum,Pineapple juice,Orange juice,Coconut cream,Nutmeg",300 ден
-39,Pisco Punch,"Pisco,Pineapple juice,Simple Syrup,Fresh Lemon Juice",280 ден
+name,ingredients,price
+Negroni,"Gin,Campari,Sweet Vermouth",250 ден
+Cuba Libre,"Rum,Coke",280 ден
+Pina Colada,"Pineapple juice, White Rum,Coconut cream",280 ден
+Long island Iced tea,"Vodka,Rum,Gin,Tequila,Triple sec,Cola,Sweet and sour mix",350 ден
+White Russian,"Vodka,Kahlua,Heavy cream",270 ден
+Black Russian,"Vodka,Coffee liqueur",270 ден
+Mojito,"Lime,Mint,White rum,Soda water",240 ден
+Kamikaze,"Vodka,Triple sec,Lime juice",230 ден
+Margarita,"Tequila,Cointreau,lime juice",200 ден
+Cosmopolitan,"Citrus vodka,Cointreau,lime juice,cranberry juice",260 ден
+B-52,"Coffee liqueur, Irish cream,Orange liqueur",200 ден
+Tequila Sunrise,"Grenadine,Tequila,Triple sec,orange,lemon",280 ден
+Old Fashioned,"Bourbon or rye whiskey,Angostura bitters,sugar,orange twist garnish",300 ден
+Moscow Mule,"Vodka,Ginger beer,Lime juice",280 ден
+Martini,"Gin or vodka,Dry vermouth,Olive",250 ден
+Whiskey Sour,"Whiskey,Lemon juice,Egg white (optional)",280 ден
+French 75,"dashes simple syrup,Lemon juice,Champagne",50 ден
+Manhattan,"Whiskey,Sweet vermouth,dashes Angostura bitters",270 ден
+Spritz,"Aperol,Cinzano Prosecco,Soda",200 ден
+Gimlet,"Gin or vodka,Simple syrup,Lime juice",200 ден
+Mimosa,"Champagne,Orange juice",250 ден
+Tom Collins,"Old Tom gin,lemon juice,simple syrup,soda",300 ден
+Penicillin,"Scotch,Lemon juice,Honey-ginger syrup",280 ден
+Paloma,"Tequila,Grapefruit juice,Sparkling water, Lime juice",260 ден
+Bloody mary ,"Vodka,Tomato juice,Lemon juice,Tabasco sauce, Worcestershire sauce",280 ден
+Americano,"Campari,Sweet Vermouth,Soda water",220 ден
+Mai Tai,"Rum,Orange liqueur,Lime juice,Orgeat syrup",260 ден
+Pisco Sour,"Pisco,Lime juice,Egg white",250 ден
+Clover Club,"Gin,Vermouth,Lemon juice,Rasberry cordial,Egg white",280 ден
+Gin Fizz,"Gin,Lemon juice,Sparkling water",250 ден
+Amaretto Sour,"Amaretto liqueur,Simple syrup,Lemon juice",270 ден
+Zombie,"Dark rum,White rum,Lime juice,Pineapple juice",280 ден
+Sazerac,"Absinthe,Rye Whiskey,Cognac,Bitters",280 ден
+Vodka Martini,"Vodka,Vermouth,Green Olive",260 ден
+Old Cuban,"Lime juice,Simple syrup,Amber rum",280 ден
+Vesper,"Gin,Vodka,Lillet aperitif",260 ден
+Bellini,"Peach pureem,Prosecco",260 ден
+Painkiller,"Rum,Pineapple juice,Orange juice,Coconut cream,Nutmeg",300 ден
+Pisco Punch,"Pisco,Pineapple juice,Simple Syrup,Fresh Lemon Juice",280 ден
