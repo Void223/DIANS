@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid w-75">
+      <span class="navbar-brand mb-0 h1"><a [routerLink]="'/home'">Explore and Find</a></span>
+      <button [routerLink]="'/cocktails'" class="btn btn-primary">{{'searchbycocktails' | translate}}</button>
+      <button [routerLink]="'/bars'" class="btn btn-primary">{{'searchbybars' | translate}}</button>
+      <button [routerLink]="'/ingredients'" class="btn btn-primary">{{'searchbyingredients' | translate}}</button>
+      <div class="d-flex">
+        <select [value]="selectedLanguage" (change)="changeLanguage($event)" name="language" id="language">
+            <option value="en">English</option>
+            <option value="mk">Македонски</option>
+          </select>
+      </div>
+    </div>
+</nav>
