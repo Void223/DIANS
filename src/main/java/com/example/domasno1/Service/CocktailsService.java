@@ -8,4 +8,5 @@ import java.util.List;
 public interface CocktailsService {
     List<Cocktails> listAll();
     List<KafesBars> availableAt();
+    List<Cocktails> containingIngredients(String text);
 }

@@ -4,12 +4,15 @@ import com.example.domasno1.Model.Cocktails;
 import com.example.domasno1.Model.KafesBars;
 import com.example.domasno1.Service.CocktailsService;
 import com.example.domasno1.Service.KafesBarsService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class KafesBarsController {
 
     private final CocktailsService cocktailsService;
@@ -28,9 +31,14 @@ public class KafesBarsController {
     }
 
     @GetMapping({"/cocktails"})
-    public List<Cocktails> showCocktails(){
+    public List<Cocktails> showCocktails(@RequestParam String ingredients){
         List<Cocktails> cocktailsList;
-        cocktailsList = cocktailsService.listAll();
+        if(ingredients==null) {
+            cocktailsList = cocktailsService.listAll();
+        }
+        else{
+            cocktailsList = cocktailsService.containingIngredients(ingredients);
+        }
         return cocktailsList;
     }
 }
