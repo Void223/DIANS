@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { BarsService } from 'src/app/services/bars.service';
 
 @Component({
   selector: 'app-bars',
@@ -9,12 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class BarsComponent implements OnInit {
   bars: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private barsService: BarsService) { }
 
   ngOnInit(): void {
-    this.http.get('assets/mock-data/bars.json').subscribe((response: any) => {
-      this.bars = response;
-    })
+    setTimeout(() => {
+      this.bars = this.barsService.bars;
+    }, 600)
   }
 
 }

@@ -2,7 +2,7 @@
   <form class="form-inline my-2 my-lg-0">
     <input class="form-control mr-sm-2" type="search" [placeholder]="'searchbar' | translate" aria-label="Search">
   </form>
-    <div *ngFor="let bar of bars" class="row mt-5 mb-5">
+    <div *ngFor="let bar of bars" class="row mt-5 mb-5" [routerLink]="['/bar-details', bar.name]">
       <div class="col text-center">
         <p>{{bar.name}}</p>
       </div>

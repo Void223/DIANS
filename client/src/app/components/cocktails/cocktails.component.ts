@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { CocktailsService } from 'src/app/services/cocktails.service';
 
 @Component({
   selector: 'app-cocktails',
@@ -9,14 +10,12 @@ import { Component, OnInit } from '@angular/core';
 export class CocktailsComponent implements OnInit {
   cocktails: any;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private cocktailsService: CocktailsService) { }
 
   ngOnInit(): void {
-    this.http.get('https://www.thecocktaildb.com/api/json/v1/1/search.php?f=b').subscribe((response: any) => {
-      this.cocktails = response;
-      console.log(this.cocktails);
-
-    })
+    setTimeout(() => {
+      this.cocktails = this.cocktailsService.cocktails;
+    }, 600)
   }
 
 }

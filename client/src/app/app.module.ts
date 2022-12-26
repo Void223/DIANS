@@ -13,6 +13,8 @@ import { TranslationPipe } from './services/translation.pipe';
 import { Observable, tap } from 'rxjs';
 import { Globals } from './shared/globals';
 import { IngredientsComponent } from './components/ingredients/ingredients.component';
+import { CocktailDetailsComponent } from './components/cocktail-details/cocktail-details.component';
+import { BarDetailsComponent } from './components/bar-details/bar-details.component';
 
 function initializeAppFactory(httpClient: HttpClient): () => Observable<any> {
   return () => httpClient.get('assets/config/app-settings.json')
@@ -36,7 +38,9 @@ function initializeAppFactory(httpClient: HttpClient): () => Observable<any> {
     CocktailsComponent,
     BarsComponent,
     TranslationPipe,
-    IngredientsComponent
+    IngredientsComponent,
+    CocktailDetailsComponent,
+    BarDetailsComponent
   ],
   imports: [
     BrowserModule,
