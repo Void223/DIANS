@@ -26,4 +26,9 @@ public class CocktailsServiceImpl implements CocktailsService {
     public List<KafesBars> availableAt() {
         return null;
     }
+
+    @Override
+    public List<Cocktails> containingIngredients(String text) {
+        return cocktailsRepo.findByIngredientsContaining(text);
+    }
 }
