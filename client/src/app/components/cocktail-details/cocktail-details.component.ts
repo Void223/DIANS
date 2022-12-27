@@ -9,13 +9,13 @@ import { CocktailsService } from 'src/app/services/cocktails.service';
 })
 export class CocktailDetailsComponent implements OnInit {
   selectedCocktail: any;
+  ingredients!: string[];
   constructor(private router: Router, private cocktailService: CocktailsService) { }
 
   ngOnInit(): void {
     let cocktailParam: string = decodeURI(this.router.url).replace('/cocktail-details/', '');
     this.selectedCocktail = this.cocktailService.cocktails.find((cocktail: any) => cocktail.name === cocktailParam);
-    console.log(this.selectedCocktail);
-
+    this.ingredients = this.selectedCocktail.ingredients.split(',')
   }
 
 }

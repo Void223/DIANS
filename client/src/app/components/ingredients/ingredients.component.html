@@ -1,1 +1,19 @@
-<p>ingredients works!</p>
+<div class="container mt-5">
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" [placeholder]="'searchbyingredients' | translate" aria-label="Search" (change)="setSearchValue($event)">
+  </form>
+  <div class="row mt-5">
+    <div *ngFor="let cocktail of cocktails" class="col text-center" [routerLink]="['/cocktail-details', cocktail.name]">
+      <div class="row">
+          <div class="col d-flex justify-content-center">
+              <img [src]="'assets/images/cocktail-thumbnails/' + cocktail.name.toLowerCase().replace(' ', '').replace('-', '') + '.jpg'">
+          </div>
+      </div>
+      <div class="row">
+          <div class="col">
+              <p class="bolded">{{cocktail.name}}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+  </div>

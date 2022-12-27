@@ -8,7 +8,7 @@ export class TranslationService {
   translations: any = JSON.parse(localStorage['translations'])
 
   translate(value: string) {
-    return this.translations[value];
+    return this.translations[value] || value;
   }
 }
 
