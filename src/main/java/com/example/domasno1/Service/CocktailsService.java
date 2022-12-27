@@ -9,4 +9,5 @@ public interface CocktailsService {
     List<Cocktails> listAll();
     List<KafesBars> availableAt();
     List<Cocktails> containingIngredients(String text);
+    List<Cocktails> findCocktailByName(String name);
 }

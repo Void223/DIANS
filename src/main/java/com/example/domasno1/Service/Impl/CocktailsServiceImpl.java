@@ -31,4 +31,9 @@ public class CocktailsServiceImpl implements CocktailsService {
     public List<Cocktails> containingIngredients(String text) {
         return cocktailsRepo.findByIngredientsContaining(text);
     }
+
+    @Override
+    public List<Cocktails> findCocktailByName(String name) {
+        return cocktailsRepo.findByName(name);
+    }
 }
