@@ -19,6 +19,10 @@
             <div>{{selectedCocktail.price}}</div>
           </div>
         </div>
+        <div class="col">
+          <h2>{{'bars' | translate}}:</h2>
+          <button *ngFor="let bar of bars" [routerLink]="['/bar-details', bar.name]" class="btn btn-primary m-3">{{bar.name}}</button>
+        </div>
       </div>
     </div>
   </div>

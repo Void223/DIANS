@@ -15,7 +15,7 @@ export class IngredientsComponent implements OnInit {
 
   setSearchValue(event: any): void {
     let queryParams = new HttpParams().append('ingredients', event.target.value)
-    this.http.get('http://localhost:8080/cocktails', { params: queryParams }).subscribe((response: any) => {
+    this.http.get('http://localhost:8080/ingredients', { params: queryParams }).subscribe((response: any) => {
       this.cocktails = response;
     })
   }
