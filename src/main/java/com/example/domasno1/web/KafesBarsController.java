@@ -31,7 +31,7 @@ public class KafesBarsController {
     }
 
     @GetMapping({"/cocktails"})
-    public List<Cocktails> showCocktails(@RequestParam String ingredients){
+    public List<Cocktails> showCocktails(@RequestParam(required = false) String ingredients){
         List<Cocktails> cocktailsList;
         if(ingredients==null) {
             cocktailsList = cocktailsService.listAll();
