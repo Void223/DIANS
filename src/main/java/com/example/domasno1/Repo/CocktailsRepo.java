@@ -10,4 +10,5 @@ import java.util.Optional;
 @Repository
 public interface CocktailsRepo extends JpaRepository<Cocktails, Long> {
     List<Cocktails> findByIngredientsContaining(String text);
+    List<Cocktails> findByName(String name);
 }

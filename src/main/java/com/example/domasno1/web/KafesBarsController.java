@@ -31,9 +31,21 @@ public class KafesBarsController {
     }
 
     @GetMapping({"/cocktails"})
-    public List<Cocktails> showCocktails(@RequestParam(required = false) String ingredients){
+    public List<Cocktails> showCocktails(@RequestParam(required = false) String name){
         List<Cocktails> cocktailsList;
-        if(ingredients==null) {
+        if(name==null) {
+            cocktailsList = cocktailsService.listAll();
+        }
+        else{
+            cocktailsList = cocktailsService.findCocktailByName(name);
+        }
+        return cocktailsList;
+    }
+
+    @GetMapping({"/ingredients"})
+    public List<Cocktails> searchByIngredients(@RequestParam(required = false) String ingredients){
+        List<Cocktails> cocktailsList;
+        if(ingredients==null){
             cocktailsList = cocktailsService.listAll();
         }
         else{
