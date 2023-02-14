@@ -17,7 +17,7 @@ services:
       context: ./spring-petclinic-rest
     env_file: ./env/postgres.env
     ports:
-      - "9966:9966"
+      - "4200:4200"
     depends_on:
       - psqldb
   frontend:
