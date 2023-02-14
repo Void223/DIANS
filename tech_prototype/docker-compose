@@ -1,0 +1,29 @@
+version: "3"
+
+volumes:
+  dbdata:
+
+services:
+  psqldb:
+    image: postgres
+    environment:
+      - POSTGRES_DB=petclinic
+    env_file:
+      - ./env/postgres.env
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+  backend:
+    build:
+      context: ./spring-petclinic-rest
+    env_file: ./env/postgres.env
+    ports:
+      - "9966:9966"
+    depends_on:
+      - psqldb
+  frontend:
+    build:
+      context: ./spring-petclinic-angular
+    ports:
+      - "8080:8080"
+    depends_on:
+      - backend
