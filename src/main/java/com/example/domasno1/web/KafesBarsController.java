@@ -4,10 +4,7 @@ import com.example.domasno1.Model.Cocktails;
 import com.example.domasno1.Model.KafesBars;
 import com.example.domasno1.Service.CocktailsService;
 import com.example.domasno1.Service.KafesBarsService;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -30,6 +27,13 @@ public class KafesBarsController {
         return kafesBarsList;
     }
 
+    @GetMapping({"/{id}/cocktails"})
+    public List<Cocktails> listCocktails(@PathVariable Long id){
+        List<Cocktails> cocktailsList;
+        cocktailsList = kafesBarsService.availableCocktails(id);
+        return cocktailsList;
+    }
+
     @GetMapping({"/cocktails"})
     public List<Cocktails> showCocktails(@RequestParam(required = false) String name){
         List<Cocktails> cocktailsList;
@@ -40,6 +44,13 @@ public class KafesBarsController {
             cocktailsList = cocktailsService.findCocktailByName(name);
         }
         return cocktailsList;
+    }
+
+    @GetMapping({"/{id}/kafebars"})
+    public List<KafesBars> listKafeBars(@PathVariable Long id){
+        List<KafesBars> kafesBarsList;
+        kafesBarsList = cocktailsService.availableAt(id);
+        return kafesBarsList;
     }
 
     @GetMapping({"/ingredients"})

@@ -23,8 +23,8 @@ public class CocktailsServiceImpl implements CocktailsService {
     }
 
     @Override
-    public List<KafesBars> availableAt() {
-        return null;
+    public List<KafesBars> availableAt(Long id) {
+        return cocktailsRepo.findById(id).get().getKafesBarsList();
     }
 
     @Override

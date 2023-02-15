@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface CocktailsService {
     List<Cocktails> listAll();
-    List<KafesBars> availableAt();
+    List<KafesBars> availableAt(Long id);
     List<Cocktails> containingIngredients(String text);
     List<Cocktails> findCocktailByName(String name);
 }
