@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  psqldb:
+    image: "postgres:9.6-alpine"
+    container-name:psqldb
+    environment:
+      - POSTGRES_DB=petclinic
+      - POSTGRES_USERNAME=src
+      - POSTGRES_PASSWORD=src
+    env_file:
+      - ./env/postgres.env
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+  src:
+    build:
+    container-name:src
+      context: ./spring-petclinic-rest
+    env_file: ./env/postgres.env
+    ports:
+      - "4200:4200"
+    depends_on:
+      - psqldb
+  client:
+    build:
+    container-name:client
+      context: ./spring-petclinic-angular
+    ports:
+      - "8080:8080"
+    depends_on:
+      - src
