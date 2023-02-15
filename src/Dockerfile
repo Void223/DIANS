@@ -3,7 +3,7 @@ FROM openjdk:11-jdk
 
 WORKDIR /src
 
-COPY src/*.jar dians.jar
+COPY mvn/*.jar maven-wrapper.jar
 COPY src/main/resources/application.properties ./
 
 
